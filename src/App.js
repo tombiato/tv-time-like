@@ -1,12 +1,17 @@
 import Header from './components/layout/Header';
-import Home from './Home';
+import Shows from './components/shows/Shows';
+import Home from './components/pages/Home';
+
+// Contexts
+import MovieState from './context/movie/MovieState';
 
 const App = () => {
 	return (
-		<div className='App'>
+		<MovieState>
 			<Header />
 			<Home />
-		</div>
+			<Shows />
+		</MovieState>
 	);
 };
 
