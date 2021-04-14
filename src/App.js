@@ -1,3 +1,6 @@
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
+// Components
 import Header from './components/layout/Header';
 import Shows from './components/shows/Shows';
 import Home from './components/pages/Home';
@@ -7,11 +10,12 @@ import MovieState from './context/movie/MovieState';
 
 const App = () => {
 	return (
-		<MovieState>
+		<Router>
 			<Header />
-			<Home />
-			<Shows />
-		</MovieState>
+			<MovieState>
+				<Route exact path='/' component={Home} />
+			</MovieState>
+		</Router>
 	);
 };
 
