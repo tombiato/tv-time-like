@@ -1,26 +1,26 @@
 import { useContext, useEffect } from 'react';
 import MovieContext from '../../context/movie/movieContext';
-import ShowItem from './ShowItem';
+import MovieItem from './MovieItem';
 
-const Shows = () => {
+const Movies = () => {
 	const movieContext = useContext(MovieContext);
 
-	const { favoritesShows, shows, getShowsPop } = movieContext;
+	const { movies, favoritesMovies, getMoviesPop } = movieContext;
 
 	useEffect(() => {
-		getShowsPop();
+		getMoviesPop();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (
 		<div className='container mx-auto bg-blue-400 p-10'>
-			<h3 className='text-2xl'>Popular Shows</h3>
+			<h3 className='text-2xl'>Popular Movies</h3>
 			<div className='grid gap-10 grid-cols-4'>
-				{shows.slice(0, 4).map(show => (
-					<ShowItem
-						key={show.id}
-						fav={favoritesShows.includes(show) ? true : false}
-						show={show}
+				{movies.slice(0, 4).map(movie => (
+					<MovieItem
+						key={movie.id}
+						fav={favoritesMovies.includes(movie) && true}
+						movie={movie}
 					/>
 				))}
 			</div>
@@ -28,4 +28,4 @@ const Shows = () => {
 	);
 };
 
-export default Shows;
+export default Movies;

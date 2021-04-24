@@ -1,3 +1,4 @@
+import Movies from '../movies/Movies';
 import Shows from '../shows/Shows';
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
 				<p>Here you can find your favorites movies and shows</p>
 			</div>
 			<Shows />
+			<Movies />
 		</>
 	);
 };

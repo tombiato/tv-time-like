@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Header = () => {
 	return (
 		<nav className='container-fluid flex items-center justify-between bg-blue-400 px-5 py-2'>
@@ -5,10 +7,10 @@ const Header = () => {
 				<a href='/'>TV Time Like</a>
 			</h1>
 			<div className='flex space-x-4'>
-				<a href='/'>Home</a>
-				<a href='/favorites'>Favorites</a>
-				<a href='/register'>Register</a>
-				<a href='/login'>Login</a>
+				<Link to='/'>Home</Link>
+				<Link to='/favorites'>Favorites</Link>
+				<Link to='/register'>Register</Link>
+				<Link to='/login'>Login</Link>
 			</div>
 		</nav>
 	);
