@@ -5,7 +5,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const FavoriteMovieItem = ({ movie, fav }) => {
 	const movieContext = useContext(MovieContext);
-	const { addMovie } = movieContext;
+	const { addMovie, removeMovie } = movieContext;
 
 	return (
 		<div className='justify-evenly bg-white'>
@@ -18,7 +18,7 @@ const FavoriteMovieItem = ({ movie, fav }) => {
 				{fav ? (
 					<FavoriteIcon
 						style={{ color: 'red' }}
-						onClick={() => addMovie(movie)}
+						onClick={() => removeMovie(movie)}
 					/>
 				) : (
 					<FavoriteBorderIcon
