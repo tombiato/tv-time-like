@@ -8,8 +8,8 @@ const MovieItem = ({ movie, fav }) => {
 	const { addMovie, removeMovie } = movieContext;
 
 	return (
-		<div className='justify-evenly bg-white'>
-			<p className='text-center'>{movie.title}</p>
+		<div className='flex flex-col bg-white'>
+			<h3 className='text-xl text-center'>{movie.title}</h3>
 			<img
 				src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
 				alt='poster'

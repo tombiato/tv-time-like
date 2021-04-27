@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 
 // Components
-import FavoriteShowItem from '../shows/FavoriteShowItem';
-import FavoriteMovieItem from '../movies/FavoriteMovieItem';
+import FavoriteShowItem from '../components/shows/FavoriteShowItem';
+import FavoriteMovieItem from '../components/movies/FavoriteMovieItem';
 
 // Context
-import MovieContext from '../../context/movie/movieContext';
+import MovieContext from '../context/movie/movieContext';
 
 const Favorites = () => {
 	const movieContext = useContext(MovieContext);
@@ -14,10 +14,10 @@ const Favorites = () => {
 	return (
 		<>
 			<div className='container mx-auto bg-blue-400 p-10'>
-				<h3 className='text-2xl'>Favorites Movies</h3>
+				<h3 className='text-2xl'>Favorites Shows</h3>
 				<div className='grid gap-10 grid-cols-4'>
-					{favoritesShows.map(movie => (
-						<FavoriteShowItem key={movie.id} fav={true} movie={movie} />
+					{favoritesShows.map(show => (
+						<FavoriteShowItem key={show.id} fav={true} show={show} />
 					))}
 				</div>
 			</div>

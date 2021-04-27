@@ -55,6 +55,20 @@ const MovieState = props => {
 		dispatch({ type: 'REMOVE_MOVIE', payload: movie });
 	};
 
+	/**
+	 * Add to favorites shows
+	 */
+	const addShow = show => {
+		dispatch({ type: 'ADD_SHOW', payload: show });
+	};
+
+	/**
+	 * Remove from favorites shows
+	 */
+	const removeShow = show => {
+		dispatch({ type: 'REMOVE_SHOW', payload: show });
+	};
+
 	return (
 		<MovieContext.Provider
 			value={{
@@ -66,6 +80,8 @@ const MovieState = props => {
 				getShowsPop,
 				addMovie,
 				removeMovie,
+				addShow,
+				removeShow,
 			}}>
 			{props.children}
 		</MovieContext.Provider>

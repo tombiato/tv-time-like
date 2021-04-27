@@ -23,6 +23,18 @@ export default (state, action) => {
 					...state.favoritesMovies.filter(movie => movie !== action.payload),
 				],
 			};
+		case 'ADD_SHOW':
+			return {
+				...state,
+				favoritesShows: [...state.favoritesShows, action.payload],
+			};
+		case 'REMOVE_SHOW':
+			return {
+				...state,
+				favoritesShows: [
+					...state.favoritesShows.filter(show => show !== action.payload),
+				],
+			};
 		default:
 			throw new Error(`Unsupported type of: ${action.type}`);
 	}

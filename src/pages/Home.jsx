@@ -1,5 +1,5 @@
-import Movies from '../movies/Movies';
-import Shows from '../shows/Shows';
+import Movies from '../components/movies/Movies';
+import Shows from '../components/shows/Shows';
 
 const Home = () => {
 	return (

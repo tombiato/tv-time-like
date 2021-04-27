@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import MovieContext from '../../context/movie/movieContext';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
@@ -8,8 +8,8 @@ const FavoriteMovieItem = ({ movie, fav }) => {
 	const { addMovie, removeMovie } = movieContext;
 
 	return (
-		<div className='justify-evenly bg-white'>
-			<p className='text-center'>{movie.title}</p>
+		<div className='flex flex-col bg-white'>
+			<h3 className='text-xl text-center'>{movie.title}</h3>
 			<img
 				src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
 				alt='poster'
