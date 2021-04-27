@@ -51,6 +51,9 @@ const MovieState = props => {
 		dispatch({ type: 'ADD_MOVIE', payload: movie });
 	};
 
+	/**
+	 * Remove from favorrites movies
+	 */
 	const removeMovie = movie => {
 		dispatch({ type: 'REMOVE_MOVIE', payload: movie });
 	};
